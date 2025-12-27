@@ -2,11 +2,11 @@
 pragma solidity ^0.8.24;
 
 import { FHE, ebool, euint32, externalEuint32 } from "@fhevm/solidity/lib/FHE.sol";
-import { SepoliaConfig } from "@fhevm/solidity/config/ZamaConfig.sol";
+import { ZamaEthereumConfig } from "@fhevm/solidity/config/ZamaConfig.sol";
 
 /// @title Number Seeker
 /// @notice Players can join to receive an encrypted random number and submit encrypted guesses.
-contract NumberSeeker is SepoliaConfig {
+contract NumberSeeker is ZamaEthereumConfig {
 
     struct PlayerState {
         euint32 secret;
