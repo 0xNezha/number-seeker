@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  font-family: "Orbitron", "Rajdhani", "Share Tech Mono", monospace, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Cyberpunk color palette */
+  --cyber-pink: #ff006e;
+  --cyber-cyan: #00f5ff;
+  --cyber-purple: #8b00ff;
+  --cyber-yellow: #ffea00;
+  --cyber-bg: #0a0e27;
+  --cyber-bg-secondary: #1a1f3a;
+  --cyber-grid: #2d3561;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%),
+    repeating-linear-gradient(0deg, rgba(0, 245, 255, 0.03) 0px, transparent 1px, transparent 2px, rgba(0, 245, 255, 0.03) 3px),
+    repeating-linear-gradient(90deg, rgba(0, 245, 255, 0.03) 0px, transparent 1px, transparent 2px, rgba(0, 245, 255, 0.03) 3px);
+  background-size: 100% 100%, 50px 50px, 50px 50px;
+  color: #00f5ff;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(139, 0, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}

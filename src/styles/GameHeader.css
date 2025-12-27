@@ -1,0 +1,53 @@
+.game-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.game-header__title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--cyber-cyan);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 10px var(--cyber-cyan),
+    0 0 20px var(--cyber-cyan),
+    0 0 40px var(--cyber-pink),
+    0 0 80px var(--cyber-pink);
+  animation: glitch 3s infinite;
+  position: relative;
+}
+
+@keyframes glitch {
+  0%, 90%, 100% {
+    transform: translate(0);
+  }
+  92% {
+    transform: translate(-2px, 2px);
+  }
+  94% {
+    transform: translate(2px, -2px);
+  }
+  96% {
+    transform: translate(-2px, -2px);
+  }
+  98% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.game-header__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--cyber-yellow);
+  text-shadow: 0 0 5px rgba(255, 234, 0, 0.5);
+  font-weight: 500;
+}
